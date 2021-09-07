@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(228, 222, 222);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+/* navigation bar */
+
+#navbar {
+    position: absolute;
+    top: 0px;
+    background: rgb(39, 35, 35);
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    min-height: 10vh;
+    min-width: 100%;
+}
+
+#navbar ul {
+    display: inline-flex;
+    font-family: 'Baloo Bhai 2', cursive;
+    margin-left: 2.01rem;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    color: blanchedalmond;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: blanchedalmond;
+    transition: all 0.54s ease-in-out;
+}
+
+
+/* humburger btn */
+
+#m-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+    border: 3px solid #fff;
+    margin: 4px 22px;
+    /* border-radius: 8px; */
+}
+
+#m-btn_burger {
+    /* display: none; */
+    width: 2rem;
+    height: .25rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgb(255 101 47 / 20%);
+    transition: all .5s ease-in-out;
+    /* margin: none; */
+}
+
+#m-btn_burger::before,
+#m-btn_burger::after {
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: .25rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+    /* margin: .2rem; */
+}
+
+
+/* #m-btn_burger::before {
+    margin-top: .2rem;
+}
+*/
+
+
+/* #m-btn_burger::after {
+    margin-bottom: .5rem;
+} */
+
+#m-btn_burger::before {
+    transform: translateY(-16px);
+}
+
+#m-btn_burger::after {
+    transform: translateY(16px);
+}
+
+.sign_sub {
+    display: none;
+    transition: all .7s ease-in-out;
+}
+
+.sign_sub .item {
+    transition: all .9s ease-out;
+}
+
+
+/* button Animation */
+
+#m-btn.open #m-btn_burger {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+#m-btn.open #m-btn_burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+#m-btn.open #m-btn_burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+
+/* #item_5:hover .sign_sub .item {
+    transform: scaleY(40px);
+} */
+
+#item_5:hover .sign_sub {
+    display: block;
+    position: absolute;
+    background: rgb(39, 35, 35);
+    /* margin-top: 9px; */
+    /* margin-left: -12px; */
+    border-radius: 17px;
+    transform: scaleY(100px);
+}
+
+#item_5:hover .sign_sub ul {
+    display: block;
+    margin: 10px;
+}
+
+#item_2:hover .sign_sub {
+    display: block;
+    position: absolute;
+    background: rgb(39, 35, 35);
+    /* margin-top: 9px; */
+    /* margin-left: -12px; */
+    border-radius: 17px;
+}
+
+#item_2:hover .sign_sub ul {
+    display: block;
+    margin: 10px;
+}
+
+#item_3:hover .sign_sub {
+    display: block;
+    position: absolute;
+    background: rgb(39, 35, 35);
+    /* margin-top: 9px; */
+    /* margin-left: -12px; */
+    border-radius: 17px;
+}
+
+#item_3:hover .sign_sub ul {
+    display: block;
+    margin: 10px;
+}
