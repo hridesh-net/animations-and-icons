@@ -86,7 +86,7 @@ body {
 
 /* btn animation */
 
-#search_btn.open #search {
+#search_btn.see #search {
     transform: translateX(-15px);
     background: transparent;
     /* display: none;
@@ -101,14 +101,14 @@ body {
     margin-top: 1rem; */
 }
 
-#search_btn.open #search_tail {
+#search_btn.see #search_tail {
     width: 2.5rem;
     margin-left: 0rem;
     margin-right: 0.4rem;
     margin-bottom: 1rem;
 }
 
-#search_btn.open #search_tail::before {
+#search_btn.see #search_tail::before {
     display: block;
     width: 2.5rem;
     margin-left: 0rem;
